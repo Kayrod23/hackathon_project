@@ -72,7 +72,7 @@ let {id} = useParams()
 
         <br />
 
-        <input type="submit" />
+       
       </form>
       <Link to={`/locations/${id}`}>
         <button>Submit</button>
