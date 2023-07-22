@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import ElectionInfo from "../Pages/ElectionInfo";
 import VoterInfo from "../Pages/VoterInfo";
@@ -24,3 +25,4 @@ function Footer() {
 }
 
 export default Footer;
+

@@ -1,3 +1,4 @@
+
 export default function VoterInfo() {
   <div>
     <h2>Voter Information</h2>
@@ -7,3 +8,4 @@ export default function VoterInfo() {
     </section>
   </div>;
 }
+
