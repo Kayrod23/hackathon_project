@@ -3,11 +3,13 @@ import VoterInfo from "./VoterInfo";
 
 const FAQ = () => {
   return (
-    <a>
+    // <a>
+    <h1>
       <h3>Frequently Asked Questions</h3>
       <ElectionInfo />
       <VoterInfo />
-    </a>
+    {/* </a> */}
+    </h1>
   );
 };
 
