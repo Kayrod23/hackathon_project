@@ -1,5 +1,5 @@
 import React from "react";
-import LocationEditForm from "../Components/LocationEditForm";
+import LocationEditForm from "../Components/LocationEditForm.js";
 
 export default function Search() {
     return (
