@@ -1,3 +1,4 @@
+
 export default function ElectionInfo() {
   return (
     <div className="Election_Info">

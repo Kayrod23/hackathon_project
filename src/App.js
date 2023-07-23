@@ -11,6 +11,8 @@ import FAQ from "./Pages/FAQ";
 function App() {
   return (
     <div className="Nav">
+      
+      <Navbar />
       <BrowserRouter>
       <Navbar />
           <Routes>
@@ -25,5 +27,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

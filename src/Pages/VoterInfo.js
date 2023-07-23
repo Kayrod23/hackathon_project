@@ -1,3 +1,4 @@
+
 export default function VoterInfo() {
   return (
     <div>
@@ -7,3 +8,4 @@ export default function VoterInfo() {
     </div>
   );
 }
+
