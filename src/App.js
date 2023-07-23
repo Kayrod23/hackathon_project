@@ -5,7 +5,6 @@ import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home.jsx";
 import Search from "./Pages/Search";
 
-
 function App() {
   const [pollLocations, setPollLocations] = useState(null)
 useEffect (() => {
