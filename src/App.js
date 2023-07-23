@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home.jsx";
 import Search from "./Pages/Search";
-
+import Navbar from "./components/Navbar";
 
 function App() {
   const [pollLocations, setPollLocations] = useState(null)
