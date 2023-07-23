@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Search from "../Pages/Search";
 import Home from "../Pages/Home";
 
 export default function Navbar() {
@@ -7,7 +6,6 @@ export default function Navbar() {
         <div className="Navbar">
         <h1>Poll Site Locator</h1>
         <Link to="/"> <button onClick={Home}>Home</button></Link>
-        <Link to="/search"><button onClick={Search}>Search</button></Link>
         <button>Map</button>
    
         </div>

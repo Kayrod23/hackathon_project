@@ -8,15 +8,15 @@ function Footer() {
     <footer>
       <p>Poll Site Locator App</p>
       <Link to="/electioninfo">
-        {" "}
+    
         <button onClick={ElectionInfo}>Election Info</button>
       </Link>
-      <Link to="/electioninfo">
-        {" "}
+      <Link to="/voterinfo">
+  
         <button onClick={VoterInfo}>Voter Info</button>
       </Link>
-      <Link to="/electioninfo">
-        {" "}
+      <Link to="/faq">
+     
         <button onClick={FAQ}>FAQ</button>
       </Link>
     </footer>
