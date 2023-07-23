@@ -1,4 +1,3 @@
-
 const FAQ = () => {
   return (
     <div className="FAQ">
