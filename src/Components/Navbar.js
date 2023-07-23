@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <div className="Navbar">
         <h1>Poll Site Locator</h1>
-        <Link to=""> <button onClick={Home}>Home</button></Link>
+        <Link to="/"> <button onClick={Home}>Home</button></Link>
         <button>Map</button>
         </div>
     );
