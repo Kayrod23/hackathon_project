@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ElectionInfo from "../Pages/ElectionInfo";
 import VoterInfo from "../Pages/VoterInfo";
 import FAQ from "../Pages/FAQ";
+import './Footer.css';
 
 function Footer() {
   return (

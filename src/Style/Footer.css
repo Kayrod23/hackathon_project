@@ -1,0 +1,36 @@
+footer {
+    background-color: #e63946;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    /* Remove default margin for the paragraph */
+}
+
+footer button {
+    background-color: #1d3557;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 4px;
+    transition: background-color 0.3s;
+}
+
+footer button:hover {
+    background-color: #f1faee;
+}
+
+footer button:active {
+    transform: scale(0.95);
+}
