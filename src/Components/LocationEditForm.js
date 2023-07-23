@@ -1,44 +1,35 @@
-
-import { useState, useEffect } from "react";
-import {  Link, useParams} from "react-router-dom";
-
+import Map from "./Map";
+import { useState } from "react";
 const API = process.env.REACT_APP_API_URL;
 
-
 function LocationEditForm() {
-  
-let {id} = useParams()
+  const [pollLocations, setPollLocations] = useState(null)
+  // const [nearby, setNearby] = useState(null)
+
   const [location, setLocation] = useState({
     buildingNumber: "",
     street: "",
     zipCode: "",
-    
   });
 
-  useEffect(() => {
-   
-    fetch(`${API}/locations`)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch(`${API}?zip_code=${location.zipCode}`)
       .then((response) => response.json())
       .then((response) => {
-        
-        setLocation(response.data)
+        setPollLocations(response.data)
       })
       .catch((error) => {
         console.error('Error fetching address:', error);
       });
-  }, []);
-
-  
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    
   };
 
   const handleTextChange = (event) => {
     setLocation({ ...location, [event.target.id]: event.target.value });
   };
   return (
+    <div>
+      { pollLocations ? <Map pollLocations={pollLocations}/> : null}
     <div className="Edit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="buildingNumber">buildingNumber:</label>
@@ -63,20 +54,15 @@ let {id} = useParams()
         <label htmlFor="zip_code">Zip Code:</label>
         <input
           id="zip_code"
-          type = "number"
+          type = "text"
           value = {location.zipCode}
           placeholder= "ZIP Code"
           onChange={handleTextChange}
-          
         />
-
         <br />
-
-       
       </form>
-      <Link to={`/locations/${id}`}>
         <button>Submit</button>
-      </Link>
+    </div>
     </div>
   );
 }
