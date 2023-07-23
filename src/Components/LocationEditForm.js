@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import {  Link, useParams} from "react-router-dom";
@@ -5,41 +6,53 @@ import {  Link, useParams} from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
+=======
+import Map from "./Map";
+import { useEffect, useState } from "react";
+>>>>>>> 167923b8e454a2248c2ee8f4162f8f33eb146b4e
 
 function LocationEditForm() {
+  const [pollLocations, setPollLocations] = useState(null)
   
-let {id} = useParams()
+  // useEffect (() => {
+  //   fetch("https://data.cityofnewyork.us/resource/utqd-4534.json")
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       setPollLocations(response)
+  //       console.log(response)
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching address:', error);
+  //     });
+  // }, [])
+
   const [location, setLocation] = useState({
     buildingNumber: "",
     street: "",
     zipCode: "",
-    
   });
-
-  useEffect(() => {
-   
-    fetch(`${API}/locations`)
+// `${process.env.REACT_APP_API_URL}?zip_code=${location.zip_code}`
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(process)
+    fetch(`${process.env.REACT_APP_API_URL}`)
       .then((response) => response.json())
       .then((response) => {
-        
-        setLocation(response.data)
+        console.log(response)
+        setPollLocations(response)
       })
       .catch((error) => {
         console.error('Error fetching address:', error);
       });
-  }, []);
-
-  
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    
   };
 
   const handleTextChange = (event) => {
     setLocation({ ...location, [event.target.id]: event.target.value });
   };
   return (
+    
+    <div>
+      { pollLocations ? <Map pollLocations={pollLocations}/> : null}
     <div className="Edit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="buildingNumber">buildingNumber:</label>
@@ -64,20 +77,16 @@ let {id} = useParams()
         <label htmlFor="zip_code">Zip Code:</label>
         <input
           id="zip_code"
-          type = "number"
+          type = "text"
           value = {location.zipCode}
           placeholder= "ZIP Code"
           onChange={handleTextChange}
-          
         />
-
         <br />
-
-       
+        <input type="submit" value="Submit"></input>
       </form>
-      <Link to={`/locations/${id}`}>
-        <button>Submit</button>
-      </Link>
+        {/* <button >Submit</button> */}
+    </div>
     </div>
   );
 }
