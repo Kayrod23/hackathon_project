@@ -20,7 +20,7 @@ function Map({pollLocations}) {
                 let lat = parseFloat(location.location.latitude)
                 let lng = parseFloat(location.location.longitude)
             return (
-                <MarkerF key={index} position={{lat: lat, lng: lng}} />
+                <MarkerF key={index} position={center} />
             )
             
          })
