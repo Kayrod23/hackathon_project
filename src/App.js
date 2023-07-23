@@ -7,7 +7,6 @@ import ElectionInfo from "./Pages/ElectionInfo";
 import VoterInfo from "./Pages/VoterInfo";
 import FAQ from "./Pages/FAQ";
 
-
 function App() {
   return (
     <div className="Nav">
