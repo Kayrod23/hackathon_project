@@ -11,16 +11,13 @@ import FAQ from "./Pages/FAQ";
 function App() {
   return (
     <div className="Nav">
-      
-      <Navbar />
       <BrowserRouter>
       <Navbar />
           <Routes>
-            {/* Define your routes here */}
             <Route path="/" element={<Home />} />
-            <Route path="/ElectionInfo" element={<ElectionInfo />} />
-            <Route path="/VoterInfo" element={<VoterInfo />} />
-            <Route path="/FAQ" element={<FAQ />} />
+            <Route path="/electionInfo" element={<ElectionInfo />} />
+            <Route path="/voterInfo" element={<VoterInfo />} />
+            <Route path="/faq" element={<FAQ />} />
           </Routes>
           <Footer />
         </BrowserRouter>
