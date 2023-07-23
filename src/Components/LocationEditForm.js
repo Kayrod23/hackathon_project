@@ -8,20 +8,27 @@ const API = process.env.REACT_APP_API_URL;
 function LocationEditForm() {
   
 let {id} = useParams()
+//  const [data, setData] = useState(false)
   const [location, setLocation] = useState({
-    buildingNumber: "",
+    site_number: "",
     street: "",
-    zipCode: "",
+    zip_code: "",
     
   });
 
   useEffect(() => {
    
     fetch(`${API}/locations`)
-      .then((response) => response.json())
+      .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
       .then((response) => {
         
-        setLocation(response.data)
+        setLocation(response.data);
+        // setData(true)
       })
       .catch((error) => {
         console.error('Error fetching address:', error);
@@ -39,18 +46,20 @@ let {id} = useParams()
     setLocation({ ...location, [event.target.id]: event.target.value });
   };
   return (
+    
     <div className="Edit">
+       
       <form onSubmit={handleSubmit}>
-        <label htmlFor="buildingNumber">buildingNumber:</label>
+        <label htmlFor="site_number">site number:</label>
         <input
-          id="buildingNumber"
-          value={location.buildingNumber}
+          id="site_Number"
+          value={location.site_number}
           type="text"
           onChange={handleTextChange}
-          placeholder="building number"
+          placeholder="site number"
           required
         />
-        
+        <br />
         <label htmlFor="street">Street:</label>
         <input
           id="street"
@@ -60,19 +69,18 @@ let {id} = useParams()
           onChange={handleTextChange}
          
         />
+
+        <br />
         <label htmlFor="zip_code">Zip Code:</label>
         <input
           id="zip_code"
           type = "number"
-          value = {location.zipCode}
-          placeholder= "ZIP Code"
+          value = {location.zip_code}
+          placeholder= "00000"
           onChange={handleTextChange}
           
         />
-
         <br />
-
-       
       </form>
       <Link to={`/locations/${id}`}>
         <button>Submit</button>
