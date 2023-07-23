@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 function LocationEditForm() {
   const [pollLocations, setPollLocations] = useState(null)
   
-  // useEffect (() => {
-  //   fetch("https://data.cityofnewyork.us/resource/utqd-4534.json")
-  //     .then((response) => response.json())
-  //     .then((response) => {
-  //       setPollLocations(response)
-  //       console.log(response)
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error fetching address:', error);
-  //     });
-  // }, [])
+  useEffect (() => {
+    fetch("https://data.cityofnewyork.us/resource/utqd-4534.json")
+      .then((response) => response.json())
+      .then((response) => {
+        setPollLocations(response)
+        console.log(response)
+      })
+      .catch((error) => {
+        console.error('Error fetching address:', error);
+      });
+  }, [])
 
   const [location, setLocation] = useState({
     buildingNumber: "",

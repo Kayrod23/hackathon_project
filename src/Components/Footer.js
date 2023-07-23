@@ -8,7 +8,7 @@ function Footer() {
   return (
     <div className="Footer">
     <footer>
-      <h1>Footer</h1>
+      
       <Link to="/electioninfo">
    
         <button onClick={ElectionInfo}>Election Info</button>
