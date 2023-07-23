@@ -16,6 +16,7 @@ function Map({pollLocations, user}) {
         {user ? console.log(user) : console.log(center)}
           {pollLocations ?
           pollLocations.filter((location)=>location.location).map((location, index) =>{
+            console.log(location)
                   let lat = parseFloat(location.location.latitude)
                   let lng = parseFloat(location.location.longitude)
               return (
