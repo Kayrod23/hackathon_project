@@ -3,7 +3,6 @@ import { GoogleMap, MarkerF, useLoadScript} from "@react-google-maps/api";
 
 function Map({pollLocations}) {
     const center = useMemo(() => ({ lat: 40.8, lng: -73.79 }), []);
-
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_API,
       });

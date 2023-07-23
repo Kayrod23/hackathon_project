@@ -1,10 +1,20 @@
 import Map from "./Map";
-import { useState } from "react";
-const API = process.env.REACT_APP_API_URL;
+import { useEffect, useState } from "react";
 
 function LocationEditForm() {
   const [pollLocations, setPollLocations] = useState(null)
-  // const [nearby, setNearby] = useState(null)
+  
+  // useEffect (() => {
+  //   fetch("https://data.cityofnewyork.us/resource/utqd-4534.json")
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       setPollLocations(response)
+  //       console.log(response)
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching address:', error);
+  //     });
+  // }, [])
 
   const [location, setLocation] = useState({
     buildingNumber: "",
@@ -14,7 +24,7 @@ function LocationEditForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`${API}?zip_code=${location.zipCode}`)
+    fetch(`${process.env.REACT_APP_API_URL}?zip_code=${location.zipCode}`)
       .then((response) => response.json())
       .then((response) => {
         setPollLocations(response.data)
@@ -28,6 +38,7 @@ function LocationEditForm() {
     setLocation({ ...location, [event.target.id]: event.target.value });
   };
   return (
+    
     <div>
       { pollLocations ? <Map pollLocations={pollLocations}/> : null}
     <div className="Edit">
