@@ -9,7 +9,7 @@ function LocationEditForm() {
   const [location, setLocation] = useState({
     buildingNumber: "",
     street: "",
-    zipCode: "",
+    zip_code: "",
   });
 
   const handleSubmit = (event) => {
@@ -41,7 +41,7 @@ function LocationEditForm() {
           placeholder="building number"
           required
         />
-        
+        <br />
         <label htmlFor="street">Street:</label>
         <input
           id="street"
@@ -51,11 +51,12 @@ function LocationEditForm() {
           onChange={handleTextChange}
          
         />
+        <br />
         <label htmlFor="zip_code">Zip Code:</label>
         <input
           id="zip_code"
-          type = "text"
-          value = {location.zipCode}
+          type = "number"
+          value = {location.zip_code}
           placeholder= "ZIP Code"
           onChange={handleTextChange}
         />
