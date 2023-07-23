@@ -4,7 +4,7 @@ export default function ElectionInfo() {
       <h1>Election Info</h1>
       <section className="DisplayInfo">
         <a href="https://www.vote.nyc/elections">
-          Check Current Locations
+          Check Current Elections
         </a>
         <p>Poll Hours: 6am - 9pm</p>
       </section>
