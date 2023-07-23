@@ -21,13 +21,15 @@ function LocationEditForm() {
     street: "",
     zip_code: "",
   });
-
+// `${process.env.REACT_APP_API_URL}?zip_code=${location.zip_code}`
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`${process.env.REACT_APP_API_URL}?zip_code=${location.zipCode}`)
+    console.log(process)
+    fetch(`${process.env.REACT_APP_API_URL}`)
       .then((response) => response.json())
       .then((response) => {
-        setPollLocations(response.data)
+        console.log(response)
+        setPollLocations(response)
       })
       .catch((error) => {
         console.error('Error fetching address:', error);
@@ -72,8 +74,9 @@ function LocationEditForm() {
           onChange={handleTextChange}
         />
         <br />
+        <input type="submit" value="Submit"></input>
       </form>
-        <button>Submit</button>
+        {/* <button >Submit</button> */}
     </div>
     </div>
   );
