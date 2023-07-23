@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Search from "./Pages/Search";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
+// import Footer from "./Components/Footer";
 import ElectionInfo from "./Pages/ElectionInfo";
 import VoterInfo from "./Pages/VoterInfo";
 import FAQ from "./Pages/FAQ";
+import LocationEditForm from "./Components/LocationEditForm";
 import "./App.css";
+
 function App() {
   return (
     <div className="Nav">
@@ -18,10 +20,11 @@ function App() {
             {/* Define your routes here */}
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<Search />} />
-            <Route path="/footer" element={<Footer />} />
+            {/* <Route path="/footer" element={<Footer />} /> */}
             <Route path="/electioninfo" element={<ElectionInfo />} />
             <Route path="/voterinfo" element={<VoterInfo />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/locationeditform" element={<LocationEditForm />} />
             </Routes> 
         </main>
       </Router>
