@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react";
-import {  Link, useParams} from "react-router-dom";
-
-
-const API = process.env.REACT_APP_API_URL;
-
-=======
 import Map from "./Map";
 import { useEffect, useState } from "react";
->>>>>>> 167923b8e454a2248c2ee8f4162f8f33eb146b4e
 
 function LocationEditForm() {
   const [pollLocations, setPollLocations] = useState(null)
