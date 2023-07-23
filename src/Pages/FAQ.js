@@ -1,16 +1,12 @@
 import ElectionInfo from "./ElectionInfo";
 import VoterInfo from "./VoterInfo";
-
 const FAQ = () => {
   return (
-    // <a>
-    <h1>
+    <a href>
       <h3>Frequently Asked Questions</h3>
-      <ElectionInfo />
+      <h4><ElectionInfo /></h4>
       <VoterInfo />
-    {/* </a> */}
-    </h1>
+    </a>
   );
-};
-
+}
 export default FAQ;
