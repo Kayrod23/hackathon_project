@@ -8,7 +8,7 @@ export default function VoterInfo() {
       <p>Requirements: {VoterInfo.VoterRequirements}</p>
       <section className="userInfo">
        <a href="https://www.elections.ny.gov/NYSBOE/download/voting/voteregform-eng-fillable.pdf">
-       New York State Voter Registration Form
+       Need to register?
        </a>
       </section>
     </div>
