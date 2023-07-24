@@ -1,9 +1,10 @@
+import "../Style/VoterInfo.css"
+
 export default function VoterInfo() {
   return (
-    <div>
-      <h2>Voter Information</h2>
-      <p>Requirements:</p>
-
+    <div className="FAQ">
+      <h2>Voter Requirements:</h2>
+      <div className="allFlip2">
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -14,7 +15,6 @@ export default function VoterInfo() {
           </div>
         </div>
       </div>
-
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -104,10 +104,13 @@ export default function VoterInfo() {
           </div>
         </div>
       </div>
-
+      </div>
       <section className="userInfo">
         <a href="https://www.elections.ny.gov/NYSBOE/download/voting/voteregform-eng-fillable.pdf">
           Need to register?
+        </a>
+        <a href="https://www.vote.nyc/elections">
+          Check Current Elections
         </a>
       </section>
     </div>
