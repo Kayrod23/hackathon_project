@@ -1,9 +1,11 @@
+import "../Style/FAQ.css"
+
 const FAQ = () => {
   return (
     <div className="FAQ">
-   
+
       <h3>Frequently Asked Questions</h3>
-      
+
       <article>
         <h5>Q. It’s my first time voting!What do I need to do?</h5>
         <p>A. Check your registration status, find your polling location, explore both early and day of voting options and research candidates</p>
