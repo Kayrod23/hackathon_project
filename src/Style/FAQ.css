@@ -1,3 +1,14 @@
+.FAQ{
+  text-align: center;
+  margin: auto;
+  width: 80%; 
+}
+.allFlip{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 25px;
+}
 .flip-card {
     background-color: blue;
     width: 300px;
@@ -10,7 +21,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 2s;
     transform-style: preserve-3d;
   }
   .flip-card:hover .flip-card-inner {

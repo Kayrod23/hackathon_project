@@ -1,5 +1,6 @@
 import Map from "./Map";
 import { useState } from "react";
+import "../Style/LocationEditForm.css"
 
 
 function LocationEditForm() {
@@ -35,9 +36,8 @@ function LocationEditForm() {
     setLocation({ ...location, [event.target.id]: event.target.value });
   };
   return (
-    
-    <div>
-      { pollLocations ? <Map pollLocations={pollLocations} user={user}/> : null}
+    <div className="form">
+      { pollLocations ? <Map pollLocations={pollLocations} user={user}/> :  <img className="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLvOhlGwQJIqG8FM36iEeCR-SU5m9RIWda1R84Ethszx4KfbjW6tJydZKwvmemhDg1hM&usqp=CAU" alt="votehands" />}
     <div className="Edit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="buildingNumber">Building number:</label>

@@ -5,11 +5,11 @@
     color: #f1faee;
     text-align: center;
     padding: 1px;
-    height: 80px;
-    position: fixed;
+    height: 50px;
+    /* position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
 }
 
 .Footer footer {
