@@ -5,3 +5,8 @@
     margin-bottom: 50px;
     margin-top: 50px;
   }
+  .userInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+  }

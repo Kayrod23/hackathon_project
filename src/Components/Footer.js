@@ -10,10 +10,10 @@ function Footer() {
     <div className="Footer">
     <footer>
       
-      <Link to="/electioninfo">
+      {/* <Link to="/electioninfo">
    
         <button onClick={ElectionInfo}>Election Info</button>
-      </Link>
+      </Link> */}
       <Link to="/voterinfo">
   
         <button onClick={VoterInfo}>Voter Info</button>
