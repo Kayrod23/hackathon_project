@@ -1,0 +1,30 @@
+/* Footer.css */
+
+.Footer {
+    background-color: #e63946;
+    color: #f1faee;
+    text-align: center;
+    padding: 1px;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Footer footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Footer button {
+    background-color: transparent;
+    border: none;
+    color: #f1faee;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+ 
