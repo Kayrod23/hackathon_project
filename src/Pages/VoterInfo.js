@@ -1,13 +1,15 @@
+import "../Style/VoterInfo.css"
+
 export default function VoterInfo() {
 
   
   return (
-    <div>
+    <div className="FAQ">
       <h2>Voter Information</h2>
       <p>Requirements:</p>
       {/* <section className="userInfo"> */}
       <p>As of my last update in September 2021, the requirements for voting in New York City (NYC) are as follows:<p/>
-
+      <div className="allFlip2">
       <div class="flip-card">
       <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -18,7 +20,6 @@ export default function VoterInfo() {
        </div>
        </div>
       </div>
-
       <div class="flip-card">
       <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -80,6 +81,7 @@ export default function VoterInfo() {
 <div class="flip-card-back">
 <h6>New York has a closed primary system, which means you must be registered with a political party to vote in its primary election. However, you can vote in non-partisan elections and the general election regardless of your party affiliation.</h6>
 </div>
+      </div>
       </div>
       </div>
 It's important to note that voting requirements can change over time, so I recommend checking the most up-to-date information on the official website of the New York City Board of Elections or the New York State Board of Elections to ensure you have the latest information regarding voter eligibility and requirements in NYC</p>
