@@ -21,7 +21,6 @@ function Map({pollLocations, user}) {
               return (
                   <MarkerF key={index} position={{lat: lat, lng: lng}} />
               )
-              
            })
           : null}
       </GoogleMap>
