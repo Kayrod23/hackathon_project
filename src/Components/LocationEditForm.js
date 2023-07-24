@@ -1,35 +1,31 @@
 import Map from "./Map";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function LocationEditForm() {
   const [pollLocations, setPollLocations] = useState(null)
-  
-  useEffect (() => {
-    fetch("https://data.cityofnewyork.us/resource/utqd-4534.json")
-      .then((response) => response.json())
+  const [user, setUser] = useState(null);
+  const [location, setLocation] = useState({
+    buildingNumber: "",
+    street: "",
+    zip_code: "",
+  });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location.buildingNumber}%${location.street}%20NYC%20USA&key=${process.env.REACT_APP_GOOGLE_API}`)
+    .then((response) => response.json())
       .then((response) => {
-        setPollLocations(response)
-        console.log(response)
+        // console.log(response.results[0].geometry.location);
+        setUser(response.results[0].geometry.location);
       })
       .catch((error) => {
         console.error('Error fetching address:', error);
       });
-  }, [])
 
-  const [location, setLocation] = useState({
-    buildingNumber: "",
-    street: "",
-    zipCode: "",
-  });
-// `${process.env.REACT_APP_API_URL}?zip_code=${location.zip_code}`
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(process)
-    fetch(`${process.env.REACT_APP_API_URL}`)
+    fetch(`${process.env.REACT_APP_API_URL}?zip_code=${location.zip_code}`)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response)
-        setPollLocations(response)
+        // console.log(response);
+        setPollLocations(response);
       })
       .catch((error) => {
         console.error('Error fetching address:', error);
@@ -42,7 +38,7 @@ function LocationEditForm() {
   return (
     
     <div>
-      { pollLocations ? <Map pollLocations={pollLocations}/> : null}
+      { pollLocations ? <Map pollLocations={pollLocations} user={user}/> : null}
     <div className="Edit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="buildingNumber">buildingNumber:</label>
@@ -68,14 +64,13 @@ function LocationEditForm() {
         <input
           id="zip_code"
           type = "text"
-          value = {location.zipCode}
+          value = {location.zip_code}
           placeholder= "ZIP Code"
           onChange={handleTextChange}
         />
         <br />
         <input type="submit" value="Submit"></input>
       </form>
-        {/* <button >Submit</button> */}
     </div>
     </div>
   );
