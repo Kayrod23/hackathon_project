@@ -2,6 +2,8 @@ import Map from "./Map";
 import { useState } from "react";
 import "../Style/LocationEditForm.css"
 
+const Google = process.env.REACT_APP_GOOGLE_API;
+const Url = process.env.REACT_APP_API_URL;
 
 function LocationEditForm() {
   const [pollLocations, setPollLocations] = useState(null)
@@ -13,7 +15,7 @@ function LocationEditForm() {
   });
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location.buildingNumber}%${location.street}%20NYC%20USA&key=${process.env.REACT_APP_GOOGLE_API}`)
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location.buildingNumber}%${location.street}%20NYC%20USA&key=${Google}`)
     .then((response) => response.json())
       .then((response) => {
         setUser(response.results[0].geometry.location);
@@ -22,7 +24,7 @@ function LocationEditForm() {
         console.error('Error fetching address:', error);
       });
 
-    fetch(`${process.env.REACT_APP_API_URL}?zip_code=${location.zip_code}`)
+    fetch(`${Url}?zip_code=${location.zip_code}`)
       .then((response) => response.json())
       .then((response) => {
         setPollLocations(response);
@@ -37,7 +39,7 @@ function LocationEditForm() {
   };
   return (
     <div className="form">
-      { pollLocations ? <Map pollLocations={pollLocations} user={user}/> :  <img className="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLvOhlGwQJIqG8FM36iEeCR-SU5m9RIWda1R84Ethszx4KfbjW6tJydZKwvmemhDg1hM&usqp=CAU" alt="votehands" />}
+      { pollLocations ? <Map pollLocations={pollLocations} user={user}/> :  <div className="imgC"><img className="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLvOhlGwQJIqG8FM36iEeCR-SU5m9RIWda1R84Ethszx4KfbjW6tJydZKwvmemhDg1hM&usqp=CAU" alt="votehands" /></div>}
     <div className="Edit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="buildingNumber">Building number:</label>
