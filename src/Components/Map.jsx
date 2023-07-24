@@ -11,11 +11,11 @@ function Map({pollLocations, user}) {
         <div>
             <h1> Loading...</h1>
         </div>);
-
-        console.log(toggle);
+  console.log()
+  // {lat: parseFloat(user.lat), lng: parseFloat(user.lng)}
     return (
-      <GoogleMap zoom={10} center={user ? user : center} mapContainerClassName="map-container">
-        {user ? console.log(user) : console.log(center)}
+      <GoogleMap zoom={12} center={user ? user : null} mapContainerClassName="map-container">
+        {user ? console.log(user) : null}
           {pollLocations ?
           pollLocations.filter((location)=>location.location).map((location, index) =>{
                   let lat = parseFloat(location.location.latitude)
@@ -29,7 +29,6 @@ function Map({pollLocations, user}) {
                   }} 
                   />
               )
-              
            })
           : null}
           {toggle ? (
