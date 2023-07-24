@@ -16,7 +16,6 @@ function Map({pollLocations, user}) {
 
     return ( 
       <GoogleMap zoom={14} center={user ? user : center} mapContainerClassName="map-container">
-        {user ? console.log(user) : console.log(center)}
           {pollLocations ?
           pollLocations.filter((location)=>location.location).map((location, index) =>{
                   let lat = parseFloat(location.location.latitude)
