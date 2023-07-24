@@ -26,5 +26,5 @@ Trello:
 https://trello.com/b/PiBGqc9Y/93-team2-hackathon-project
 
 Netlify:
-https://64be8e722127f40008a82a2d--frabjous-praline-c8eef1.netlify.app/
+https://frabjous-praline-c8eef1.netlify.app/
 
