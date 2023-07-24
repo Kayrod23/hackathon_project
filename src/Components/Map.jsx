@@ -1,5 +1,5 @@
-import { useMemo, useState, Link } from "react";
-import { GoogleMap, InfoWindow, MarkerF, useLoadScript, DirectionsRenderer} from "@react-google-maps/api";
+import { useMemo, useState } from "react";
+import { GoogleMap, InfoWindow, MarkerF, useLoadScript } from "@react-google-maps/api";
 
 function Map({pollLocations, user}) {
     const center = useMemo(() => ({ lat: 40.8, lng: -73.79 }), []);
@@ -12,7 +12,7 @@ function Map({pollLocations, user}) {
             <h1> Loading...</h1>
         </div>);
 
-  console.log()
+  console.log();
 
     return ( 
       <GoogleMap zoom={14} center={user ? user : center} mapContainerClassName="map-container">
@@ -38,7 +38,7 @@ function Map({pollLocations, user}) {
                   <h5>Site Name: {toggle.site_name}</h5>
                   <h5>Council District: {toggle.council_district}</h5>
                   <h5>Entrance: {toggle.voter_entrance}</h5>
-                  <a href={`https://www.google.com/maps?q=40.831088,-73.902452`}>
+                  <a href={`https://www.google.com/maps?q=${toggle.location.latitude},${toggle.location.longitude}`}>
                       View in Google Maps
                   </a>
                   <button onClick={() => {
