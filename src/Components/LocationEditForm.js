@@ -1,6 +1,7 @@
 import Map from "./Map";
 import { useState } from "react";
 
+
 function LocationEditForm() {
   const [pollLocations, setPollLocations] = useState(null)
   const [user, setUser] = useState(null);
