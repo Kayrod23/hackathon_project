@@ -1,3 +1,11 @@
-body {
-    background-color: #457b9d;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
 }

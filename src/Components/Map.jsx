@@ -12,6 +12,7 @@ function Map({pollLocations}) {
         </div>);
 
     return (
+       <div className="map-container">
       <GoogleMap zoom={8} center={center} mapContainerClassName="map-container">
           {pollLocations ?
           pollLocations.filter((location)=>location.location).map((location, index) =>{
@@ -24,6 +25,7 @@ function Map({pollLocations}) {
            })
           : null}
       </GoogleMap>
+      </div>
     );
   }
 

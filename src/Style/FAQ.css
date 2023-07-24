@@ -1,0 +1,6 @@
+.faq-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}

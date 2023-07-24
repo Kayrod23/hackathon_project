@@ -1,5 +1,7 @@
 import Map from "./Map";
 import { useEffect, useState } from "react";
+import '../Style/LocationEditForm.css'; 
+
 
 function LocationEditForm() {
   const [pollLocations, setPollLocations] = useState(null)
@@ -40,43 +42,40 @@ function LocationEditForm() {
     setLocation({ ...location, [event.target.id]: event.target.value });
   };
   return (
-    
     <div>
-      { pollLocations ? <Map pollLocations={pollLocations}/> : null}
-    <div className="Edit">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="buildingNumber">buildingNumber:</label>
-        <input
-          id="buildingNumber"
-          value={location.buildingNumber}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="building number"
-          required
-        />
-        
-        <label htmlFor="street">Street:</label>
-        <input
-          id="street"
-          type="text"
-          value={location.street}
-          placeholder="street number or name"
-          onChange={handleTextChange}
-         
-        />
-        <label htmlFor="zip_code">Zip Code:</label>
-        <input
-          id="zip_code"
-          type = "text"
-          value = {location.zipCode}
-          placeholder= "ZIP Code"
-          onChange={handleTextChange}
-        />
-        <br />
-        <input type="submit" value="Submit"></input>
-      </form>
-        {/* <button >Submit</button> */}
-    </div>
+      {pollLocations ? <Map pollLocations={pollLocations} /> : null}
+      <div className="Edit">
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="buildingNumber">Building Number:</label>
+          <input
+            id="buildingNumber"
+            value={location.buildingNumber}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="building number"
+            required
+          />
+
+          <label htmlFor="street">Street Name:</label>
+          <input
+            id="street"
+            type="text"
+            value={location.street}
+            placeholder="street number or name"
+            onChange={handleTextChange}
+          />
+          <label htmlFor="zip_code">Zip Code:</label>
+          <input
+            id="zip_code"
+            type="text"
+            value={location.zipCode}
+            placeholder="zip Code"
+            onChange={handleTextChange}
+          />
+          <br />
+          <input type="submit" value="Submit"></input>
+        </form>
+      </div>
     </div>
   );
 }

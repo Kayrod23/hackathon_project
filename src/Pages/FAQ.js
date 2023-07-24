@@ -1,12 +1,11 @@
-import ElectionInfo from "./ElectionInfo";
-import VoterInfo from "./VoterInfo";
+/*import ElectionInfo from "./ElectionInfo";
+import VoterInfo from "./VoterInfo";*/
+import '../Style/FAQ.css';
 const FAQ = () => {
   return (
-    <a href>
-      <h3>Frequently Asked Questions</h3>
-      <h4><ElectionInfo /></h4>
-      <VoterInfo />
-    </a>
+    <div className="faq-container">
+             <h2>Frequently Asked Questions</h2>
+          </div>
   );
 }
 export default FAQ;

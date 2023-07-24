@@ -1,0 +1,11 @@
+
+.Election_Info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DisplayInfo {
+    text-align: center;
+}
