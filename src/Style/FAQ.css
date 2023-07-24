@@ -1,6 +1,13 @@
+
 .faq-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
+    
+}
+h2 {
+    text-align: center;
+   
 }

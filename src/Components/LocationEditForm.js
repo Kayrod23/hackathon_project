@@ -64,7 +64,7 @@ function LocationEditForm() {
             placeholder="street number or name"
             onChange={handleTextChange}
           />
-          <label htmlFor="zip_code">Zip Code:</label>
+          <label htmlFor="zip_code">Zip code:</label>
           <input
             id="zip_code"
             type="text"
