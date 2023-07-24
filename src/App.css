@@ -2,3 +2,34 @@
   width: 60%;
   height: 60vh;
 }
+body {
+  background-color: #457b9d;
+}
+.Nav {
+  color: #1d3557;
+}
+
+body {
+  font-family: "Palatino", "URW Palladio L", serif;
+}
+
+button {
+  
+  background-color: #a8dadc;
+  color: #f1faee;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d3557;
+
+}
+
+button:active {
+  background-color: #457b9d;
+  
+}

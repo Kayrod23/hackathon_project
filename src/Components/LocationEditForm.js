@@ -39,7 +39,7 @@ function LocationEditForm() {
       { pollLocations ? <Map pollLocations={pollLocations} user={user}/> : null}
     <div className="Edit">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="buildingNumber">buildingNumber:</label>
+        <label htmlFor="buildingNumber">Building number:</label>
         <input
           id="buildingNumber"
           value={location.buildingNumber}
@@ -49,7 +49,7 @@ function LocationEditForm() {
           required
         />
         
-        <label htmlFor="street">Street:</label>
+        <label htmlFor="street">Street Name:</label>
         <input
           id="street"
           type="text"
@@ -63,7 +63,7 @@ function LocationEditForm() {
           id="zip_code"
           type = "text"
           value = {location.zip_code}
-          placeholder= "ZIP Code"
+          placeholder= "Zip code"
           onChange={handleTextChange}
         />
         <br />
