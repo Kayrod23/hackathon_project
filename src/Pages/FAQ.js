@@ -26,6 +26,36 @@ const FAQ = () => {
         <p>
           A.You are the next generation. Voting now and participating in political decisions will ensure that you have a future to look forward to. If you want a future with a job, accessible healthcare, and anything else that is important to you, you need to fight for it.
         </p>
+        <h5>
+          Q.What do I do if I encounter problems while voting in New York City?
+        </h5>
+        <p>
+          A.If you encounter any issues while voting in New York City, seek assistance from poll workers or election officials at your polling location. You can also call the Election Protection Hotline at 866-OUR-VOTE (866-687-8683) for help.
+        </p>
+        <h5>
+          Q.What happens if I make a mistake on my ballot in New York City?
+        </h5>
+        <p>
+         A.If you make a mistake on your ballot in New York City, you can request a new one from poll workers or election officials at your polling place.
+        </p>
+        <h5>
+          Q.Can I vote in New York City if I'm a student or live in a different part of the city from my permanent address?
+        </h5> 
+        <p>
+         A.If you are a student or living in a different part of New York City from your permanent address, you can choose to register and vote in the area where you are currently residing.
+        </p> 
+        <h5>
+          Q.Can I vote in New York City if I have a criminal record?
+        </h5>
+        <p>
+          A.In New York City, individuals with felony convictions regain their voting rights upon completion of their prison sentence. You are eligible to vote once you have been released from incarceration, even if you are on parole.
+        </p>
+        <h5>
+          Q.What are the different methods of voting in New York City (in-person, mail-in, early voting)?
+        </h5>
+        <p>
+          A.In New York City, you can vote in person on Election Day, participate in early voting at designated locations, or vote by absentee ballot if you qualify.
+        </p>
         </article>
     </div>
   );
