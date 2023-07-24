@@ -1,7 +1,13 @@
 .map-container {
-  width: 60%;
+  width: 80%;
   height: 60vh;
 }
+/* /* .infoWindow {
+  
+} */
+/* h5{
+  padding: -10;
+} */ 
 body {
   background-color: #457b9d;
 }
