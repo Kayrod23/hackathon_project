@@ -14,7 +14,6 @@ function LocationEditForm() {
     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location.buildingNumber}%${location.street}%20NYC%20USA&key=${process.env.REACT_APP_GOOGLE_API}`)
     .then((response) => response.json())
       .then((response) => {
-        // console.log(response.results[0].geometry.location);
         setUser(response.results[0].geometry.location);
       })
       .catch((error) => {
@@ -24,7 +23,6 @@ function LocationEditForm() {
     fetch(`${process.env.REACT_APP_API_URL}?zip_code=${location.zip_code}`)
       .then((response) => response.json())
       .then((response) => {
-        // console.log(response);
         setPollLocations(response);
       })
       .catch((error) => {
